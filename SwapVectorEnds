@@ -3,16 +3,16 @@
 using namespace std;
 
 /* Your solution goes here  */
-void SwapVectorEnds(vector<int>&, int vectorVals){
-   int swapVal;
-   unsigned int j;
-   for(j=0; j<vectorVals.size(); ++j){
-       swapVal = vectorVals.size(0);
-      vectorVals.at(0) = vectorVals.size() - 1;
+void SwapVectorEnds(vector<int>& vectorVals){
+   int firstValue; /*this is where the last value will be stored*/
+   int vectorSize;
+   unsigned int j; /*counter*/
+   
+   vectorSize = vectorVals.size()-1;
+   firstValue = vectorVals.at(0);  /*first value in vector*/
+   vectorVals.at(0) = vectorVals.at(vectorSize); /* replace the first value in the vector with the last*/
+   vectorVals.at(vectorSize) = firstValue; /* replace last value with the saved value*/
       
-      vectorVals.at(j-1) = swapVal;
-      
-   }
 }
 
 int main() {
