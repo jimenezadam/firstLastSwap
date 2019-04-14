@@ -7,9 +7,11 @@ void SwapVectorEnds(vector<int>&, int vectorVals){
    int swapVal;
    unsigned int j;
    for(j=0; j<vectorVals.size(); ++j){
+       swapVal = vectorVals.size(0);
       vectorVals.at(0) = vectorVals.size() - 1;
-      swapVal = vectorVals.size() - 1;
-      vectorVals.at(j-1) = vectroVals.size() - 1;
+      
+      vectorVals.at(j-1) = swapVal;
+      
    }
 }
 
