@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+/* Your solution goes here  */
+void SwapVectorEnds(vector<int>&, int vectorVals){
+   int swapVal;
+   unsigned int j;
+   for(j=0; j<vectorVals.size(); ++j){
+      vectorVals.at(0) = vectorVals.size() - 1;
+      swapVal = vectorVals.size() - 1;
+      vectorVals.at(j-1) = vectroVals.size() - 1;
+   }
+}
+
+int main() {
+   vector<int> sortVector(4);
+   unsigned int i;
+
+   sortVector.at(0) = 10;
+   sortVector.at(1) = 20;
+   sortVector.at(2) = 30;
+   sortVector.at(3) = 40;
+
+   SwapVectorEnds(sortVector);
+
+   for (i = 0; i < sortVector.size(); ++i) {
+      cout << sortVector.at(i) << " ";
+   }
+   cout << endl;
+
+   return 0;
+}
